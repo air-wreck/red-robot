@@ -2,10 +2,10 @@
 
 #include <AFMotor.h>
 
-AF_DCMotor motorFL(2);
-AF_DCMotor motorBL(3);
-AF_DCMotor motorFR(1);
-AF_DCMotor motorBR(4);
+AF_DCMotor motorFR(2);
+AF_DCMotor motorBR(3);
+AF_DCMotor motorFL(1);
+AF_DCMotor motorBL(4);
 /******************************************************************
  * set pins connected to PS2 controller:
  *   - 1e column: original 
@@ -149,7 +149,7 @@ void loop() {
     }  
    
     // strict speed for DPad 
-    int strict_speed = 50;
+    int strict_speed = 100;
     
     if(ps2x.Button(PSB_PAD_UP)){
       motorFR.run(FORWARD);
